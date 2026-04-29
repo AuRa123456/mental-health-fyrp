@@ -1,0 +1,215 @@
+<style>
+  :root {
+    --bg: #ffffff;
+    --card: #ffffff;
+    --border: #9ca3af;
+    --text: #111827;
+    --muted: #6b7280;
+
+    --rf: #3b82f6;
+    --xgb: #10b981;
+    --svm: #8b5cf6;
+  }
+
+  body {
+    background: var(--bg);
+  }
+
+  .table-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    font-family: Inter, sans-serif;
+    color: var(--text);
+  }
+
+  /* shared container */
+  .content {
+    width: fit-content;
+  }
+
+  .heading {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+    text-align: left;
+  }
+
+  .table-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .model-card {
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    width: fit-content;
+    min-width: 260px;
+  }
+
+  .model-title {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+  }
+
+  .rf { background: var(--rf); }
+  .xgb { background: var(--xgb); }
+  .svm { background: var(--svm); }
+
+  table {
+    border-collapse: collapse;
+    width: auto;
+  }
+
+  th {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 6px 10px;
+    border-bottom: 2px solid var(--border);
+    background: #f3f4f6;
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 6px 10px;
+    font-size: 13px;
+    border-bottom: 1.5px solid var(--border);
+    white-space: nowrap;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  .na {
+    color: var(--muted);
+    font-style: italic;
+  }
+</style>
+
+<div class="table-wrapper">
+
+  <div class="content">
+    <div class="heading">Text Only Evaluation</div>
+
+    <div class="table-container">
+
+      <!-- Random Forest -->
+      <div class="model-card">
+        <div class="model-title">
+          <span class="dot rf"></span> Random Forest
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Folds</th>
+              <th>Accuracy</th>
+              <th>ROC-AUC</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td class="na">N/A</td>
+              <td>0.7333333333333333</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>0.7310344827586206</td>
+              <td>0.6904495614035088</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>0.7309523809523809</td>
+              <td>0.7514444444444445</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- XGBoost -->
+      <div class="model-card">
+        <div class="model-title">
+          <span class="dot xgb"></span> XGBoost
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Folds</th>
+              <th>Accuracy</th>
+              <th>ROC-AUC</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td class="na">N/A</td>
+              <td>0.7055555555555555</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>0.6672413793103449</td>
+              <td>0.5993932748538011</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>0.7457142857142858</td>
+              <td>0.7146666666666667</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- SVM -->
+      <div class="model-card">
+        <div class="model-title">
+          <span class="dot svm"></span> SVM
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Folds</th>
+              <th>Accuracy</th>
+              <th>ROC-AUC</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td class="na">N/A</td>
+              <td>0.7166666666666667</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>0.7593596059113301</td>
+              <td>0.7639766081871345</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>0.7880952380952382</td>
+              <td>0.8075555555555555</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</div>
