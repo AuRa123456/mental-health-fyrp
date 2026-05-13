@@ -9,19 +9,16 @@ data = []
 
 for i in range(n_samples):
 
-    # Slight class imbalance (realistic)
     depressed = np.random.choice([0, 1], p=[0.65, 0.35])
 
-    # Overlapping distributions
+    # overlapping distributions
     mean_pitch = np.random.normal(135 - depressed*10, 20)
     pitch_var = np.random.normal(12 - depressed*3, 6)
     energy = np.random.normal(0.4 - depressed*0.05, 0.15)
     pause_duration = np.random.normal(1.5 + depressed*0.5, 0.7)
 
-    # Add noise
     mfcc_features = np.random.normal(0, 1.5, 5)
 
-    # Text embeddings slightly correlated
     text_features = np.random.normal(0 - depressed*0.3, 1.2, 10)
 
     row = [
