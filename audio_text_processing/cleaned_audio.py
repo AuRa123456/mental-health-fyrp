@@ -11,7 +11,7 @@ start_time = time.time()
 # -------------------------------
 # FOLDER PATHS
 # -------------------------------
-DATA_FOLDER = "D:\\FINAL_YEAR_RESEARCH\\AUDIO_AND_TRANSCRIPTS"            # Folder containing audio + transcripts
+DATA_FOLDER = "D:\\FINAL_YEAR_RESEARCH\\AUDIO_AND_TRANSCRIPTS" # Folder containing audio + transcripts
 OUTPUT_FOLDER = "D:\\FINAL_YEAR_RESEARCH\\Cleaned_Audio" # Folder where cleaned audio will be saved
 
 TARGET_SR = 16000

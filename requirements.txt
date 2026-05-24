@@ -1,0 +1,27 @@
+# --- Data Handling & Numerical Computing ---
+numpy
+pandas
+
+# --- Audio Processing ---
+librosa
+soundfile
+scipy
+parselmouth
+
+# --- NLP & Text Processing ---
+nltk
+sentence-transformers
+tqdm
+
+# --- Machine Learning ---
+scikit-learn
+xgboost
+catboost
+
+# --- Jupyter Notebook ---
+jupyter
+notebook
+ipykernel
+
+# --- Google Colab (only needed if running on Colab) ---
+# google-colab
