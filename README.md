@@ -1,4 +1,4 @@
-# 🧠 Multimodal Depression Detection from Speech and Linguistic Analysis Across Conversational Phases
+# Multimodal Depression Detection from Speech and Linguistic Analysis Across Conversational Phases
 
 > Depression Detection using Multimodal Audio & Text Analysis — A Final Year Research Project (FYRP)
 
@@ -9,7 +9,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 1. [Project Overview](#-project-overview)
 2. [Folder Structure](#-folder-structure)
@@ -27,7 +27,7 @@
 
 ---
 
-## 🔬 Project Overview
+## Project Overview
 
 This Final Year Research Project (FYRP) focuses on **detecting depression from clinical interview data** using a multimodal machine learning approach. The system analyzes both **audio recordings** and **text transcripts** from the **DAIC-WOZ dataset** to classify participants as *depressed* or *non-depressed* based on the **PHQ-8** (Patient Health Questionnaire-8) binary score.
 
@@ -48,7 +48,7 @@ This Final Year Research Project (FYRP) focuses on **detecting depression from c
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```
 mental-health-fyrp/
@@ -96,7 +96,7 @@ mental-health-fyrp/
 
 ---
 
-## ⚙️ Prerequisites & Installation
+## Prerequisites & Installation
 
 ### System Requirements
 
@@ -165,7 +165,7 @@ python -c "import librosa, parselmouth, sklearn, xgboost, sentence_transformers;
 
 ---
 
-## 📊 Dataset Requirements
+## Dataset Requirements
 
 This project uses the **DAIC-WOZ Depression Database**. You will need the following raw data files before running the preprocessing scripts:
 
@@ -522,7 +522,7 @@ Trains RF, XGBoost, SVM, and CatBoost on combined phasewise audio+text features 
 
 ---
 
-## 📂 Data Files Reference
+## Data Files Reference
 
 ### Files in `data/` Directory
 
@@ -557,7 +557,7 @@ Trains RF, XGBoost, SVM, and CatBoost on combined phasewise audio+text features 
 | Google Colab drive mount fails | Ensure you are logged into the correct Google account. For local execution, modify paths and remove the `google.colab` import. |
 | Memory errors during SBERT encoding | Process transcripts in smaller batches or use a machine with more RAM. The `all-MiniLM-L6-v2` model is lightweight but encoding many long transcripts can still require significant memory. |
 
-### ⚠️ Important Notes
+### Important Notes
 
 - **Execution order matters:** Run audio preprocessing (Step 1) and transcript preprocessing (Step 2) before feature extraction (Steps 3–4), and complete feature extraction before model training (Steps 5–6).
 - **File paths** in the scripts may need to be updated to match your local directory structure. The scripts were originally written with absolute Windows paths.
@@ -567,7 +567,7 @@ Trains RF, XGBoost, SVM, and CatBoost on combined phasewise audio+text features 
 
 ---
 
-## 🔄 Execution Pipeline Summary
+## Execution Pipeline Summary
 
 ```
 Raw Audio + Transcripts
@@ -591,6 +591,6 @@ Evaluation Results (Classification Reports, ROC-AUC)
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
