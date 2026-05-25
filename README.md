@@ -111,7 +111,7 @@ mental-health-fyrp/
 **Step 1: Clone the repository**
 
 ```bash
-git clone https://github.com/<username>/mental-health-fyrp.git
+git clone https://github.com/AuRa123456/mental-health-fyrp.git
 cd mental-health-fyrp
 ```
 
